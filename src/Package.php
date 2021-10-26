@@ -36,6 +36,11 @@ class Package
     public function authorization(): string
     {
         $authorization = $this->config('authorization_value');
+        
+        // Log an error if package is missing authorization key.
+        if (!$authorization):
+            report(new NoAuthorizationKey);
+        endif;
 
         return $authorization ?? "";
     }
