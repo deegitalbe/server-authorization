@@ -13,5 +13,5 @@ class NoAuthorizationKey extends Exception
      * 
      * @var string
      */
-    protected $message = "Trustup server authorization package is missing required secret key. Please add TRUSTUP_SERVER_AUTHORIZATION in you environment.";
+    protected $message = "Trustup server authorization package is missing required secret key. Please add TRUSTUP_SERVER_AUTHORIZATION to your environment.";
 }
