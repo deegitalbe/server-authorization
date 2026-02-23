@@ -12,7 +12,7 @@ class ServerAuthorizationServiceProvider extends ServiceProvider
      * 
      * @return void
      */
-    public function register()
+    public function register(): void
     {
         $this->bindFacade()
             ->registerConfig();
@@ -23,7 +23,7 @@ class ServerAuthorizationServiceProvider extends ServiceProvider
      * 
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         $this->makeConfigPublishable();
     }

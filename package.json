@@ -1,0 +1,11 @@
+{
+  "name": "@deegitalbe/server-authorization",
+  "version": "1.2.0",
+  "main": "index.js",
+  "repository": "git@github.com:deegitalbe/server-authorization.git",
+  "author": "Mathieu Henrotay <mathieu.henrotay@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "postversion": "git push && git push --tags"
+  }
+}

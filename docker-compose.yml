@@ -1,0 +1,9 @@
+services:
+  cli:
+    build:
+      context: .
+      target: cli
+      dockerfile: Dockerfile
+    image: "server-authorization-php-local"
+    volumes:
+      - ./:/opt/apps/app

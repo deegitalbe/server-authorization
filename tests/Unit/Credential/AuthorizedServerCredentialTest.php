@@ -1,6 +1,7 @@
 <?php
 namespace Deegitalbe\ServerAuthorization\Tests\Unit\Credential;
 
+use PHPUnit\Framework\Attributes\Test;
 use Deegitalbe\ServerAuthorization\Tests\TestCase;
 use Deegitalbe\ServerAuthorization\Facades\Package;
 use Henrotaym\LaravelApiClient\Contracts\RequestContract;
@@ -8,9 +9,7 @@ use Deegitalbe\ServerAuthorization\Credential\AuthorizedServerCredential;
 
 class AuthorizedServerCredentialTest extends TestCase
 {
-    /**
-     * @test
-     */
+    #[Test]
     public function authorized_server_credential_preparing_request()
     {
         // Faking package values
@@ -31,7 +30,7 @@ class AuthorizedServerCredentialTest extends TestCase
                 return $headers === [
                     $header => $authorization,
                     'X-Requested-With' => "XMLHttpRequest",
-                    'Content-Type' => "application/json"
+                    'Accept' => "application/json"
                 ];
             });
 

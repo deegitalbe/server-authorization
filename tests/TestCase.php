@@ -17,7 +17,7 @@ class TestCase extends BaseTestCase
      * @param Application $app
      * @return array
      */
-    protected function getPackageProviders($app)
+    protected function getPackageProviders($app): array
     {
         return [
             ServerAuthorizationServiceProvider::class

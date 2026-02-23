@@ -2,15 +2,14 @@
 namespace Deegitalbe\ServerAuthorization\Tests\Unit\Facade;
 
 use Illuminate\Support\Facades\Log;
+use PHPUnit\Framework\Attributes\Test;
 use Deegitalbe\ServerAuthorization\Tests\TestCase;
 use Deegitalbe\ServerAuthorization\Facades\Package;
 use Deegitalbe\ServerAuthorization\Exceptions\NoAuthorizationKey;
 
 class PackageTest extends TestCase
 {
-    /**
-     * @test
-     */
+    #[Test]
     public function package_facade_returning_config_authorization_key()
     {
         $value = ":test";
@@ -19,9 +18,7 @@ class PackageTest extends TestCase
         $this->assertEquals($value, Package::authorization());
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function package_facade_returning_config_authorization_header()
     {
         $value = ":test";
@@ -30,9 +27,7 @@ class PackageTest extends TestCase
         $this->assertEquals($value, Package::header());
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function package_facade_creating_log_if_no_authorization_key()
     {
         Log::shouldReceive('error')
@@ -46,7 +41,7 @@ class PackageTest extends TestCase
 
     /**
      * Setting package config value.
-     * 
+     *
      * @param string $key
      * @param mixed $value
      * @return self
