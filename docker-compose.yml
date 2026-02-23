@@ -7,3 +7,11 @@ services:
     image: "server-authorization-php-local"
     volumes:
       - ./:/opt/apps/app
+  bun:
+    build:
+      context: .
+      target: bun
+      dockerfile: Dockerfile
+    image: "server-authorization-bun-local"
+    volumes:
+      - ./:/opt/apps/app
