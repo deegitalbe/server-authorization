@@ -1,5 +1,13 @@
 # Server authorization
 This package is used to authenticate **NON CRITICAL** requests between our applications.
+
+## Compatibility
+
+| Laravel | Package |
+|---|---|
+| 8.x | 1.x |
+| 12.x | 2.x |
+
 ## Installation
 
     composer require deegitalbe/server-authorization
